@@ -1,0 +1,39 @@
+body{
+	color: #333;
+}
+
+a{
+	color: #333;
+}
+
+.nav li a{
+	color: #888;
+}
+
+.nav li a:hover{
+	color: #888;
+}
+
+.nav li.selected a, .nav li.selected a:hover{
+	color: #d35757;
+} 
+
+.title li a{
+	color: #666;
+}
+
+.title li.selected a{
+	color:#c20c0c;
+}
+
+.newlist p{
+	color:#999;
+}
+
+.hotlist .author a{
+	color:#666;
+}
+
+.hotlist .info{
+	color:#999;
+}
