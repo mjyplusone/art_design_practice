@@ -1,0 +1,137 @@
+.rect{
+    perspective: 800px;
+    cursor: default;
+}
+
+.rect .container{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 250px auto;
+    transform-style: preserve-3d;
+    -webkit-animation: rotate 30s linear infinite;
+}
+
+.container>div{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: 2px solid black;
+}
+
+.top{
+    top: -200px;
+    -webkit-animation: top 2s 2s linear both;
+}
+
+.bottom{
+    bottom: -200px;
+    -webkit-animation: bottom 2s 4s linear both;
+}
+
+.left{
+    left: -200px;
+    -webkit-animation: left 2s 6s linear both;
+}
+
+.right{
+    right: -200px;
+    -webkit-animation: right 2s 8s linear both;
+}
+
+.back{
+    -webkit-animation: back 2s 10s linear both;
+}
+
+.front{
+    -webkit-animation: front 2s 12s linear both;
+}
+
+.rect:hover .top{
+    background:rgba(255,255,0,0.6);
+}
+
+.rect:hover .bottom{
+    background:rgba(0,255,0,0.6);
+}
+
+.rect:hover .left{
+    background:rgba(0,255,255,0.6);
+}
+
+.rect:hover .right{
+    background:rgba(0,0,255,0.6);
+}
+
+.rect:hover .font{
+    background:rgba(255,0,255,0.6);
+}
+
+.rect:hover .back{
+    background:rgba(255,0,0,0.6);
+}
+
+
+
+
+@-webkit-keyframes top{
+    100%{-webkit-transform: rotateX(-90deg); transform-origin: bottom;}
+}
+
+@-webkit-keyframes bottom{
+    100%{-webkit-transform: rotateX(90deg); transform-origin: top;}
+}
+
+@-webkit-keyframes left{
+    100%{-webkit-transform: rotateY(90deg); transform-origin: right;}
+}
+
+@-webkit-keyframes right{
+    100%{-webkit-transform: rotateY(-90deg); transform-origin: left;}
+}
+
+@-webkit-keyframes back{
+    100%{-webkit-transform:rotateY(180deg);}
+}
+
+@-webkit-keyframes front{
+    100%{-webkit-transform:translateZ(200px);}
+}
+
+@-webkit-keyframes rotate{
+    /*100%{-webkit-transform:rotate3d(1,1,1,360deg);}*/
+    0% {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    10% {
+        transform: rotateX(0deg) rotateY(180deg);
+    }
+    20% {
+        transform: rotateX(-180deg) rotateY(180deg);
+    }
+    30% {
+        transform: rotateX(-360deg) rotateY(180deg);
+    }
+    40% {
+        transform: rotateX(-360deg) rotateY(360deg);
+    }
+    50% {
+        transform: rotateX(-180deg) rotateY(360deg);
+    }
+    60% {
+        transform: rotateX(90deg) rotateY(180deg);
+    }
+    70% {
+        transform: rotateX(0) rotateY(180deg);
+    }
+    80% {
+        transform: rotateX(90deg) rotateY(90deg);
+    }
+    90% {
+        transform: rotateX(90deg) rotateY(0);
+    }
+    100% {
+        transform: rotateX(0) rotateY(0);
+    }
+}

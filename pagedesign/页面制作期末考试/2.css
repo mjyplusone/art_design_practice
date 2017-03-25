@@ -1,0 +1,33 @@
+.title{
+    font: 14px "Microsoft yahei";
+    font-weight: bold;
+    line-height: 16px;
+    margin-bottom: 15px;
+}
+
+.item{
+    margin-bottom: 15px;
+    vertical-align: middle;
+}
+
+.label{
+    font: 12px "宋体";
+    width: 60px;
+    display: inline-block;
+}
+
+.input{
+    width: 200px;
+    height: 20px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+}
+
+.submit{
+    width: 40px; height: 20px;
+    background-color: blue;
+    color: white;
+    border: 0;
+    font-size: 12px;
+    margin-left: 60px;
+}

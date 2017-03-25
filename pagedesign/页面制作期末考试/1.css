@@ -1,0 +1,43 @@
+.main{
+
+}
+
+.main .img{    
+    float: left;
+    margin-right: 15px;
+}
+
+.img img{
+    width: 100px;
+    height: 100px;
+}
+
+.main .text{
+    font-family: "宋体";
+    height: 100px;
+    overflow: hidden;
+}
+
+.title{
+    font: 16px black;
+    font-weight: bold;
+    line-height: 25px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.phase{
+    line-height: 25px;
+    font-size: 14px;
+    color: #666;
+}
+
+.clearfix:after{
+    content: ".";
+    display: block;
+    clear: both;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}

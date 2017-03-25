@@ -1,0 +1,10 @@
+p{
+    width: 200px;
+    font: 16px "宋体";
+    font-weight: bold;
+    color: black;
+    line-height: 25px;
+    overflow: hidden;
+    white-space: nowrap; /*强制不换行*/
+    text-overflow: ellipsis;
+}

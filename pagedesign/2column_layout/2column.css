@@ -1,0 +1,33 @@
+html, body, .body, .side, .main{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.body{
+    width: 960px;
+    margin: 0 auto;
+    background-color: rebeccapurple;
+}
+
+.side{
+    float: right;
+    width: 300px;
+    background-color: pink;
+}
+
+.main{
+    float: left;
+    width: 660px;
+    background-color: #eee;
+}
+
+/*不清除浮动父元素就会失去高度*/
+.clearfix:after{
+    content: '.';
+    display: block;
+    clear: both;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}

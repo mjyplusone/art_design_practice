@@ -1,0 +1,27 @@
+.main{
+    font: 12px "宋体";
+    color: black;
+}
+
+.btn{
+    width: 50px; height: 28px;
+    background: #eee;
+    border: 1px solid #ddd;
+    margin-bottom: 1px;
+}
+
+.xiala{
+    display: inline-block;
+}
+
+.xiala>div{
+    list-style: none;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    border: 1px solid #ddd;
+}
+
+.xiala>div:hover{
+    background: #ddd;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>弹窗</title>
+    <style>
+        body{margin:0;}
+        .popout{position:fixed;top:50%;
+                    left:50%;width:302px;         
+                    flex-direction:column;
+                    transform:translate(-50%,-50%);
+                }
+            .head{background-color:#eeeeee;
+                display:flex;
+                flex-direction:row;
+            border-top:1px solid #cccccc;
+            border-left:1px solid #cccccc;
+            border-right:1px solid #cccccc;
+            border-radius:5px 5px 0 0/5px 5px 0 0;}
+        .title{height:40px;
+                font:14px "微软雅黑";
+                line-height:40px;
+                text-overflow:ellipsis;
+                overflow:hidden;
+                white-space:nowrap;
+                padding-left:20px;
+                flex-grow:1;
+                }
+        .close{height:10px;
+                width:10px;
+                margin-top:10px;
+                margin-right:10px;
+                cursor:pointer;
+                }
+        .content{  
+                border-bottom:1px solid #cccccc;
+                border-left:1px solid #cccccc;
+                border-right:1px solid #cccccc;
+                border-radius:0 0 5px 5px/0 0 5px 5px;
+                padding:20px;
+                }
+        .paragraph{
+                font:12px "宋体";
+                line-height:1.5em;
+                margin-bottom:20px;
+                }
+        .button{
+                background-color:#2e7ecb;
+                font:12px "宋体";
+                color:white;
+                border:0px;
+                border-radius:5px;
+                height:30px;
+                width:80px;
+                padding:0;
+                display:block;
+                margin:0 auto;         
+                }
+    </style>
+</head>
+<body>
+    <div class="popout">
+        <div class="head">
+            <div class="title">
+            标题栏
+            </div>
+            <img src="../x.png" class="close">
+            </img>
+        </div>
+        <div class="content">
+            <div class="paragraph">
+            内容区段落
+            </div>
+            <button type="button" class="button">
+            确定
+            </button>
+        </div>
+    </div>
+</body>
+</html>

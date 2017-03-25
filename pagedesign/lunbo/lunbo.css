@@ -1,0 +1,53 @@
+.lunbo{
+    position: relative;
+    width: 560px;
+    margin: 20px auto;
+}
+
+.lunbo img{
+    width: 50%;
+    height: 50%;
+    display: block;
+}
+
+.img1{
+    float: left;
+}
+
+.img2{
+    margin-right: 280px;
+}
+
+.lunbo .title{
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    width: 100%;
+    line-height: 45px;
+    background-color: #000;
+    opacity: 0.65;
+}
+
+.lunbo .title a{
+    margin-left: 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.lunbo .control{
+    position: absolute;
+    bottom: 15px;
+    right: 10px;
+}
+
+.lunbo .control span{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: auto 1px;
+    background-color: gray;
+}
+
+.lunbo .control span.cur{
+    background-color: #fff;
+}

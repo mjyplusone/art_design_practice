@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>loading动画1</title>
+    <style type="text/css">
+        .loading{
+            position: fixed;
+            top: 50%; left: 50%;
+            width: 40px; height: 40px;
+            margin: -20px 0 0 -20px;
+            box-sizing: border-box;
+            /*3/4圆的做法*/
+            border: 2px solid;
+            border-color: #333 #333 transparent;
+            border-radius: 50%;
+            animation: load 1s linear infinite both;
+        }
+        @keyframes load{
+            100%{transform: rotate(360deg);}
+        }
+    </style>
+</head>
+<body>
+    <div class="loading"></div>
+</body>
+</html>
