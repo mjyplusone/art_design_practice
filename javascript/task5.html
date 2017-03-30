@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>函数escapeHTML用于转义html字符串中的特殊字符</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function escapeHTML(htmlStr){
+            var reg = /[<>&"]/g;
+            var result = htmlStr.replace(reg, function(c){
+                switch(c)
+                {
+                    case "<": return "&lt;";
+                    case ">": return "&gt;";
+                    case "&": return "&amp;";
+                    case '"': return "&quot;";
+                }
+            });
+            return result;
+        }
+        var result = escapeHTML('<div>Tom&Jerry</div> '); 	
+        console.log(result);   //'&lt;div&gt;Tom&amp;Jerry&lt;/div&gt; '
+        result = escapeHTML('<input type="text" name="mobile"> '); 		
+        console.log(result);   //'&lt;inputtype=&quot;text&quot; name=&quot;mobile&quot;&gt;'
+    </script>
+</body>
+</html>

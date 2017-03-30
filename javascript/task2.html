@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>函数parseQuery用于解析url查询参数</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function parseQuery(query){
+            var reg = /([^=&\s]+)[=\s]*([^=&\s]*)/g;
+            var obj = {};
+            while(reg.exec(query)){
+                obj[RegExp.$1] = RegExp.$2;
+            }
+            return obj;
+        }
+        var jerry = parseQuery("name=jerry&age=1");
+        var tom = parseQuery("name= tom &age=12&gender&");
+        console.log(jerry);
+        console.log(tom);
+    </script>
+</body>
+</html>
