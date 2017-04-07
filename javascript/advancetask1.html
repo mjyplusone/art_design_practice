@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>实现type函数用于识别标准类型和内置对象类型</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function type(obj){
+            return Object.prototype.toString.call(obj).slice(8, -1).toLowerCase();
+        }
+        var t = type(1) // t==="number"
+        console.log(t);
+        var t = type(new Number(1)) // t==="number"
+        console.log(t);
+        var t = type("abc") // t==="string"
+        console.log(t);
+        var t = type(new String("abc")) // t==="string"
+        console.log(t);
+        var t = type(true) // t==="boolean"
+        console.log(t);
+        var t = type(undefined) // t==="undefined"
+        console.log(t);
+        var t = type(null) // t==="null"
+        console.log(t);
+        var t = type({}) // t==="object"
+        console.log(t);
+        var t = type([]) // t==="array"
+        console.log(t);
+        var t = type(new Date) // t==="date"
+        console.log(t);
+        var t = type(/\d/) // t==="regexp"
+        console.log(t);
+        var t = type(function(){}) // t==="function"
+        console.log(t);
+    </script>
+</body>
+</html>

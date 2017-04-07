@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>编码实现下面删除数组中重复元素的功能</title>
+</head>
+<body>
+    <script type="text/javascript">
+        Array.prototype.deleteRepeat = function(){
+            var arr = this,
+                result = [],
+                flag = true;
+            for(var i = 0; i<arr.length; i++)
+            {
+                for(var j = 0; j<result.length; j++)
+                {
+                    if(result[j] === arr[i])
+                    {
+                        flag = false;
+                        break;
+                    }
+                }
+                if(flag) result.push(arr[i]);
+                flag = true;
+            }
+            return result;
+        }
+        console.log([2,4,2,3,4].deleteRepeat());
+    </script>
+</body>
+</html>

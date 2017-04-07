@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>请实现一个函数，参数为n，返回结果为以n为下标的斐波那契数</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function fibonacci(n){
+            if(n===0){
+                return 0;
+            }
+            else if(n===1){
+                return 1;
+            }
+            else{
+                return fibonacci(n-1) + fibonacci(n-2);
+            }
+            
+        }
+        var num = fibonacci(3);
+        console.log(num);
+        var num2 = fibonacci(5);
+        console.log(num2);
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>实现一个Circle类</title>
+</head>
+<body>
+<!--a.创建一个圆（Circle）的类，并定义该类的一个属性（半径）和两个方法（周长和面积），其中圆的半径可以通过构造函数初始化
+    b.创建圆的一个对象，并调用该对象的方法计算圆的周长和面积-->
+    <script type="text/javascript">
+        function Circle(r){
+            this.r = r;
+        }
+        Circle.prototype.zhouchang = function(){
+            return 2*Math.PI*this.r;
+        }
+        Circle.prototype.area = function(){
+            return Math.PI*Math.pow(this.r, 2);
+        }
+        var circle = new Circle(5);
+        console.log(circle.zhouchang());
+        console.log(circle.area());
+    </script>
+</body>
+</html>

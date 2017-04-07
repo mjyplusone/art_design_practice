@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用JS写一个类继承模型</title>
+    <!--定义父类和子类，并创建父类和子类的属性和方法
+        子类继承父类的属性的方法
+        在创建子类对象时，调用父类构造函数-->
+</head>
+<body>
+    <script type="text/javascript">
+        function parent(name, age){
+            this.name = name;
+            this.age = age;
+        }
+        parent.prototype.introage = function(){
+            return this.name + ' is ' + this.age + ' years old.'
+        }
+
+        function child(name, age, sex){
+            parent.apply(this, arguments);
+            this.sex = sex;
+        }
+        child.prototype = new parent();
+        child.prototype.constructor = child;
+        child.prototype.introsex = function(){
+            return this.name + ' is ' + this.sex;
+        }
+
+        var result = new child('mjy', 20, 'girl');
+        console.log(result.introage());
+        console.log(result.introsex());
+    </script>
+</body>
+</html>
