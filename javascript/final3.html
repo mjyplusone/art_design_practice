@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数formatDate用于将日期对象转换成指定格式的字符串</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function formatDate(date, pattern){
+            pattern = pattern.replace(/yyyy/,date.getFullYear());
+            pattern = pattern.replace(/MM/,padding(date.getMonth()+1));
+            pattern = pattern.replace(/dd/,padding(date.getDate()));
+            pattern = pattern.replace(/HH/,padding(date.getHours()));
+            pattern = pattern.replace(/mm/,padding(date.getMinutes()));
+            pattern = pattern.replace(/ss/,padding(date.getSeconds()));
+            return pattern;
+        }
+        function padding(number){  
+            // 补零  
+            return number < 10 ? '0'+number : ''+number;  
+        }  
+        var date = new Date(2001,8,11,8,26,8);
+        console.log(formatDate(date, "yyyy"));  //"2001"
+        console.log(formatDate(date, "yyyy-MM-dd")); //"2001-09-11"
+        console.log(formatDate(date, "yyyy-MM-dd HH")); //"2001-09-11 08"
+        console.log(formatDate(date, "yyyy-MM-dd HH:mm:ss")); //"2001-09-11 08:26:08"
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数myType用于根据输入参数返回相应的类型信息。</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function myType(param){
+            if(typeof(param) === 'object'){
+                if(Object.prototype.toString.call(param).slice(8, -1) === 'Object') return 'object';
+                else return Object.prototype.toString.call(param).slice(8, -1);
+            }
+            else{
+                return typeof(param);
+            }
+            //return Object.prototype.toString.call(param).slice(8, -1);
+        }           
+        var t = myType (1); // "number"
+        console.log(t);
+        var t = myType (false); // "boolean"
+        console.log(t);
+        var t = myType ({}); // "object"
+        console.log(t);
+        var t = myType ([]); // "Array"
+        console.log(t);
+        var t = myType (function(){}); // "function"
+        console.log(t);
+        var t = myType (new Date()); // "Date"
+        console.log(t);
+    </script>
+</body>
+</html>
